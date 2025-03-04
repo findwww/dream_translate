@@ -175,8 +175,7 @@ function googleTranslate() {
 			srcLan = this.langMap[srcLan] || 'auto'
 			tarLan = this.langMap[tarLan] || 'zh-CN'
 			return new Promise(async (resolve, reject) => {
-				if (q.length > 1000) return reject('The text is too large!')
-
+				
 				// 翻译接口来源于，官方的 Google 翻译插件
 				const url = `https://translate-pa.googleapis.com/v1/translate?params.client=gtx` +
 					`&query.source_language=${srcLan}` +
